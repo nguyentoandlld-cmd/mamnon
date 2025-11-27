@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Tuyên Truyền Thông Minh</title>
+
+    <!-- Google Fonts dễ thương -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #FFF9C4, #FFE1F2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        header h1 {
+            color: #FF4081;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #795548;
+            font-size: 1.1em;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-7px);}
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .card {
+            background: #FFECB3;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #5D4037;
+            font-weight: bold;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) rotate(-2deg);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-8px);}
+        }
+
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Responsive điện thoại */
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.6em; }
+            header p { font-size: 1em; }
+            .card img { width: 50px; height: 50px; }
+            main { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BẢNG TUYÊN TRUYỀN THÔNG MINH</h1>
+        <p>Chọn mục để xem chi tiết</p>
+    </header>
+
+    <main>
+        <a class="card" href="https://drive.google.com/drive/folders/1F9kFjsyJOw3kqOBzWfm7r_0O-wftDHVR?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942800.png" alt="Điểm danh">
+            Điểm danh bé
+        </a>
+        <a class="card" href="https://drive.google.com/drive/folders/1V2ZriC1LeJHJfNCLmLQ62f8kI7dpsE6a?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Sức khỏe">
+            Tình trạng sức khỏe
+        </a>
+        <a class="card" href="https://drive.google.com/drive/folders/1hbXQQCNVLguqb3mQ_sV3uMfcO8FpcJuQ?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Kế hoạch giáo dục">
+            Kế hoạch học tập
+        </a>
+        <a class="card" href="https://drive.google.com/drive/folders/1lAYyOSCIl0QPyWCmuUyaViF3_IYmypqI?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3524/3524637.png" alt="Trò chuyện">
+            Tin nhắn & Trò chuyện
+        </a>
+        <a class="card" href="https://drive.google.com/drive/folders/1662b4auFd4dsq4cMU9YyAlzypAthn9bz?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Thực đơn">
+            Thực đơn hàng ngày
+        </a>
+        <a class="card" href="https://drive.google.com/drive/folders/1u925umiNpEf5JxmRgOblPxrLsJfx24eP?usp=drive_link" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910761.png" alt="Hoạt động hằng ngày">
+            Hoạt động của bé
+        </a>
+    </main>
+</body>
+</html>
